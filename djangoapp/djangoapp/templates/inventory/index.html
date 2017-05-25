@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content%}
+  <h1>Homepage</h1>
+  <ul>
+
+    {% for item in items %}
+    <a href="{% url 'item_details' item.id %}">
+
+      <li>{{ item.name | capfirst }}</li>
+
+    </a>
+    {% endfor %}
+  </ul>
+{% endblock content %}
